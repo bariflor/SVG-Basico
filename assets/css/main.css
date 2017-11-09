@@ -1,4 +1,4 @@
-*, *:before, *after{
+*, *:before, *:after{
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
@@ -18,13 +18,56 @@ h1, h2 {
 	margin: 30px 0;
 	text-align: center;
 }
+
+
 .grafico,
 .grafico-con-texto{
 	margin: 1em auto;
 	width: 20%;
+	display: block;
 }
 .grafico-con-texto{
 	color: white,
-	background: transparent url("../img/star.svg") left top no-repeat;
+	background: transparent url('../img/star.svg') left top no-repeat;
 	height: 200px;
+}
+/*ejercicio#2*/
+.circulo-exterior{
+	fill: #CAA61F;
+	width:90%;
+	height:30em;
+}
+/*ejercicio#3*/
+.star-point,
+.outer-circle{
+	opacity: 0;
+}
+
+.inner-circle{
+	stroke-opacity: 0;
+}
+
+.star{
+	stroke-width: 8;
+}
+
+@media only screen and (min-width: 30em){
+	.inner-circle{
+	stroke-opacity: 1;
+    }
+}
+
+@media only screen and (min-width: 40em){
+	.outer-circle{
+	  opacity: 1;
+    }
+    .star{
+	  stroke-width: 4;
+    }
+}
+
+@media only screen and (min-width: 64em){
+	.star-point{
+	opacity: 0;
+    }
 }
